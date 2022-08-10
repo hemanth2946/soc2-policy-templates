@@ -1,0 +1,71 @@
+<p>name: Log Management Policy
+    acronym: LMP
+    satisfies:
+    TSC:<span class="hljs-bullet">- </span>CC7.2
+    majorRevisions:</p>
+<ul>
+    <li>date: Sept. 23 2020
+        comment: Initial document</li>
+</ul>
+<hr>
+<h1 id="purpose-and-scope">Purpose and Scope</h1>
+<p>a. This log management and review policy defines specific requirements for information systems to generate, store,
+    process, and aggregate appropriate audit logs across the organization’s entire environment in order to provide key
+    information and detect indicators of potential compromise.</p>
+<p>a. This policy applies to all information systems within the organization’s production network.</p>
+<p>a. This policy applies to all employees, contractors, and partners of the organization that administer or provide
+    maintenance on the organization’s production systems. Throughout this policy, these individuals are referred to as
+    system administrators.</p>
+<h1 id="background">Background</h1>
+<p>a. In order to measure an information system’s level of security through confidentiality, integrity, and
+    availability, the system must collect audit data that provides key insights into system performance and activities.
+    This audit data is collected in the form of system logs. Logging from critical systems, applications, and services
+    provides information that can serve as a starting point for metrics and incident investigations. This policy
+    provides specific requirements and instructions for how to manage such logs.</p>
+<h1 id="policy">Policy</h1>
+<p>a. All production systems within the organization shall record and retain audit-logging information that includes the
+    following information:</p>
+<pre><code><span class="hljs-selector-tag">i</span>. Activities performed on the system.
+    
+    <span class="hljs-selector-tag">i</span>. The user or entity (<span class="hljs-selector-tag">i</span><span class="hljs-selector-class">.e</span>. system account) that performed the activity, including the system that the activity was performed from.
+    
+    <span class="hljs-selector-tag">i</span>. The file, application, or other <span class="hljs-selector-tag">object</span> that the activity was performed on.
+    
+    <span class="hljs-selector-tag">i</span>. The <span class="hljs-selector-tag">time</span> that the activity occurred.
+    
+    <span class="hljs-selector-tag">i</span>. The tool that the activity was performed with.
+    
+    <span class="hljs-selector-tag">i</span>. The outcome (e<span class="hljs-selector-class">.g</span>., success or failure) of the activity.
+    </code></pre>
+<p>a. Specific activities to be logged must include, at a minimum:</p>
+<pre><code>i. Information (including authentication information such <span class="hljs-keyword">as</span> usernames <span class="hljs-keyword">or</span> passwords) is created, <span class="hljs-built_in">read</span>, updated, <span class="hljs-keyword">or</span> deleted. 
+    
+    i. Accepted <span class="hljs-keyword">or</span> initiated network connections. 
+    
+    i. User authentication <span class="hljs-keyword">and</span> authorization <span class="hljs-built_in">to</span> systems <span class="hljs-keyword">and</span> networks.
+    
+    i. Granting, modification, <span class="hljs-keyword">or</span> revocation <span class="hljs-keyword">of</span> access rights, including adding <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> user <span class="hljs-keyword">or</span> group; changing user privileges, <span class="hljs-built_in">file</span> permissions, database object permissions, firewall rules, <span class="hljs-keyword">and</span> passwords.
+    
+    i. System, network, <span class="hljs-keyword">or</span> services configuration changes, including software installation, patches, updates, <span class="hljs-keyword">or</span> other installed software changes.
+    
+    i. Startup, shutdown, <span class="hljs-keyword">or</span> restart <span class="hljs-keyword">of</span> <span class="hljs-keyword">an</span> application. 
+    
+    i. Application <span class="hljs-built_in">process</span> abort, failure, <span class="hljs-keyword">or</span> abnormal <span class="hljs-keyword">end</span>, especially due <span class="hljs-built_in">to</span> resource exhaustion <span class="hljs-keyword">or</span> reaching <span class="hljs-keyword">a</span> resource limit <span class="hljs-keyword">or</span> threshold (such <span class="hljs-keyword">as</span> CPU, memory, network connections, network bandwidth, disk <span class="hljs-literal">space</span>, <span class="hljs-keyword">or</span> other resources), <span class="hljs-keyword">the</span> failure <span class="hljs-keyword">of</span> network services such <span class="hljs-keyword">as</span> DHCP <span class="hljs-keyword">or</span> DNS, <span class="hljs-keyword">or</span> hardware fault.
+    
+    i. Detection <span class="hljs-keyword">of</span> suspicious <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> malicious activity <span class="hljs-built_in">from</span> <span class="hljs-keyword">a</span> security <span class="hljs-keyword">system</span> such <span class="hljs-keyword">as</span> <span class="hljs-keyword">an</span> Intrusion Detection <span class="hljs-keyword">or</span> Prevention System (IDS/IPS), anti-virus <span class="hljs-keyword">system</span>, <span class="hljs-keyword">or</span> anti-spyware <span class="hljs-keyword">system</span>.
+    </code></pre>
+<p>a. Unless technically impractical or infeasible, all logs must be aggregated in a central system so that activities
+    across different systems can be correlated, analyzed, and tracked for similarities, trends, and cascading effects.
+    Log aggregation systems must have automatic and timely log ingest, event and anomaly tagging and alerting, and
+    ability for manual review.</p>
+<p>a. Logs must be manually reviewed on a regular basis:</p>
+<pre><code>i. The activities <span class="hljs-keyword">of</span> users, administrators <span class="hljs-keyword">and</span> system operators must be reviewed <span class="hljs-keyword">on</span> <span class="hljs-keyword">at</span> least a monthly basis.
+    
+    ii. Logs related <span class="hljs-keyword">to</span> PII must be reviewed <span class="hljs-keyword">on</span> <span class="hljs-keyword">at</span> least a monthly basis <span class="hljs-keyword">in</span> order <span class="hljs-keyword">to</span> identify unusual behavior.
+    </code></pre>
+<p>a. When using an outsourced cloud environment, logs must be kept on cloud environment access and use, resource
+    allocation and utilization, and changes to PII. Logs must be kept for all administrators and operators performing
+    activities in cloud environments.</p>
+<p>a. All information systems within the organization must synchronize their clocks by implementing Network Time
+    Protocol (NTP) or a similar capability. All information systems must synchronize with the same primary time source.
+</p>

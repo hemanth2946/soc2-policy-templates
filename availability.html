@@ -1,0 +1,79 @@
+<p>name: Availability Policy
+    acronym: AP
+    satisfies:
+      TSC:-<span class="ruby"> A1.<span class="hljs-number">1</span>
+    </span>-<span class="ruby"> CC9.<span class="hljs-number">1</span></span>
+    majorRevisions:</p>
+    <ul>
+    <li>date: Sept. 23 2020
+    comment: Initial document</li>
+    </ul>
+    <hr>
+    <h1 id="purpose-and-scope">Purpose and Scope</h1>
+    <p>a. The purpose of this policy is to define requirements for proper controls to protect the availability of the organization’s information systems.</p>
+    <p>a. This policy applies to all users of information systems within the organization. This typically includes employees and contractors, as well as any external parties that come into contact with systems and information controlled by the organization (hereinafter referred to as “users”). This policy must be made readily available to all users.</p>
+    <h1 id="background">Background</h1>
+    <p>a. The intent of this policy is to minimize the amount of unexpected or unplanned downtime (also known as outages) of information systems under the organization’s control. This policy prescribes specific measures for the organization that will increase system redundancy, introduce failover mechanisms, and implement monitoring such that outages are prevented as much as possible. Where they cannot be prevented, outages will be quickly detected and remediated.</p>
+    <p>a. Within this policy, an availability is defined as a characteristic of information or information systems in which such information or systems can be accessed by authorized entities whenever needed.</p>
+    <h1 id="references">References</h1>
+    <p>a. Risk Assessment Policy</p>
+    <h1 id="policy">Policy</h1>
+    <p>a. Information systems must be consistently available to conduct and support business operations.</p>
+    <p>a. Information systems must have a defined availability classification, with appropriate controls enabled and incorporated into development and production processes based on this classification.</p>
+    <p>a. System and network failures must be reported promptly to the organization’s lead for Information Technology (IT) or designated IT operations manager.</p>
+    <p>a. Users must be notified of scheduled outages (e.g., system maintenance) that require periods of downtime. This notification must specify the date and time of the system maintenance, expected duration, and anticipated system or service resumption time.</p>
+    <p>a. Prior to production use, each new or significantly modified application must have a completed risk assessment that includes availability risks. Risk assessments must be completed in accordance with the Risk Assessment Policy (reference (a)).</p>
+    <p>a. Capacity management and load balancing techniques must be used, as deemed necessary, to help minimize the risk and impact of system failures.</p>
+    <p>a. Information systems  must have an appropriate data backup plan that ensures:</p>
+    <pre><code>i. All sensitive data can be restored <span class="hljs-keyword">within</span> <span class="hljs-keyword">a</span> reasonable <span class="hljs-built_in">time</span> period.
+    
+    i. Full backups <span class="hljs-keyword">of</span> critical resources are performed <span class="hljs-keyword">on</span> <span class="hljs-title">at</span> <span class="hljs-title">least</span> <span class="hljs-title">a</span> <span class="hljs-title">weekly</span> <span class="hljs-title">basis</span>.
+    
+    i. Incremental backups <span class="hljs-keyword">for</span> critical resources are performed <span class="hljs-keyword">on</span> <span class="hljs-title">at</span> <span class="hljs-title">least</span> <span class="hljs-title">a</span> <span class="hljs-title">daily</span> <span class="hljs-title">basis</span>.
+    
+    i. Backups <span class="hljs-keyword">and</span> associated media are maintained <span class="hljs-keyword">for</span> <span class="hljs-keyword">a</span> minimum <span class="hljs-keyword">of</span> thirty (<span class="hljs-number">30</span>) days <span class="hljs-keyword">and</span> retained <span class="hljs-keyword">for</span> <span class="hljs-keyword">at</span> least <span class="hljs-literal">one</span> (<span class="hljs-number">1</span>) year, <span class="hljs-keyword">or</span> <span class="hljs-keyword">in</span> accordance <span class="hljs-keyword">with</span> legal <span class="hljs-keyword">and</span> regulatory requirements.
+    
+    i. Backups are stored off-site <span class="hljs-keyword">with</span> multiple points <span class="hljs-keyword">of</span> redundancy <span class="hljs-keyword">and</span> protected <span class="hljs-keyword">using</span> encryption <span class="hljs-keyword">and</span> key management.
+    
+    i. Tests <span class="hljs-keyword">of</span> backup data must be conducted once per quarter. Tests <span class="hljs-keyword">of</span> configurations must be conducted twice per year.
+    </code></pre><p>a. Information systems  must have an appropriate redundancy and failover plan that meets the following criteria:</p>
+    <pre><code>i. Network infrastructure that supports critical resources must have system-level redundancy (including but not limited to a secondary power supply, <span class="hljs-keyword">backup</span> disk-<span class="hljs-built_in">array</span>, <span class="hljs-keyword">and</span> secondary computing <span class="hljs-keyword">system</span>). <span class="hljs-keyword">Critical</span> core components (<span class="hljs-keyword">including</span> but <span class="hljs-keyword">not</span> limited <span class="hljs-keyword">to</span> routers, switches, <span class="hljs-keyword">and</span> other devices linked <span class="hljs-keyword">to</span> Service <span class="hljs-keyword">Level</span> Agreements (SLAs)) must have an actively maintained spare. SLAs must require parts replacement <span class="hljs-keyword">within</span> twenty-four (<span class="hljs-number">24</span>) hours.
+    
+    i. Servers that support <span class="hljs-keyword">critical</span> resources must have redundant <span class="hljs-keyword">power</span> supplies <span class="hljs-keyword">and</span> network <span class="hljs-keyword">interface</span> cards. All servers must have an actively maintained spare. SLAs must require parts replacement <span class="hljs-keyword">within</span> twenty-four (<span class="hljs-number">24</span>) hours.
+    
+    i. Servers classified <span class="hljs-keyword">as</span> <span class="hljs-keyword">high</span> <span class="hljs-keyword">availability</span> must <span class="hljs-keyword">use</span> disk mirroring.
+    </code></pre><p>a. Information systems must have an appropriate business continuity plan that meets the following criteria:</p>
+    <pre><code>i. Recovery <span class="hljs-built_in">time</span> <span class="hljs-keyword">and</span> data loss limits are defined <span class="hljs-keyword">in</span> Table <span class="hljs-number">3.</span> 
+    
+    i. Recovery <span class="hljs-built_in">time</span> requirements <span class="hljs-keyword">and</span> data loss limits must be adhered <span class="hljs-built_in">to</span> <span class="hljs-keyword">with</span> specific documentation <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> plan.
+    
+    i. Company <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> external critical resources, personnel, <span class="hljs-keyword">and</span> necessary corrective actions must be specifically identified.
+    
+    i. Specific responsibilities <span class="hljs-keyword">and</span> tasks <span class="hljs-keyword">for</span> responding <span class="hljs-built_in">to</span> emergencies <span class="hljs-keyword">and</span> resuming business operations must be included <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> plan.
+    
+    i. All applicable legal <span class="hljs-keyword">and</span> regulatory requirements must be satisfied.
+    </code></pre><p>+-------------------+------------------+---------------+-------------------+------------------+
+    |<strong>Availability</strong>   | <strong>Availability</strong> | <strong>Scheduled</strong> | <strong>Recovery Time</strong> | <strong>Data Loss or</strong> |
+    |<strong>Classification</strong> | <strong>Requirements</strong> | <strong>Outage</strong>    | <strong>Requirements</strong>  | <strong>Impact Loss</strong>  |
+    +===================+==================+===============+===================+==================+
+    | High              | High to          | 30 minutes    | 1 hour            | Minimal          |
+    |                   | Continuous       |               |                   |                  |
+    +-------------------+------------------+---------------+-------------------+------------------+
+    |                   |                  |               |                   |                  |
+    +-------------------+------------------+---------------+-------------------+------------------+
+    | Medium            | Standard         | 2 hours       | 4 hours           | Some data loss   |
+    |                   | Availability     |               |                   | is tolerated if  |
+    |                   |                  |               |                   | it results in    |
+    |                   |                  |               |                   | quicker          |
+    |                   |                  |               |                   | restoration      |
+    +-------------------+------------------+---------------+-------------------+------------------+
+    |                   |                  |               |                   |                  |
+    +-------------------+------------------+---------------+-------------------+------------------+
+    | Low               | Limited          | 4 hours       | Next              | Some data loss   |
+    |                   | Availability     |               | business day      | is tolerated if  |
+    |                   |                  |               |                   | it results in    |
+    |                   |                  |               |                   | quicker          |
+    |                   |                  |               |                   | restoration      |
+    +-------------------+------------------+---------------+-------------------+------------------+</p>
+    <p>Table 3: Recovery Time and Data Loss Limits </p>
+    
